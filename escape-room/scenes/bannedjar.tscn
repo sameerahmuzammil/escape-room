@@ -1,15 +1,15 @@
 [gd_scene load_steps=3 format=3 uid="uid://b5f85os76g7ut"]
 
-[ext_resource type="Texture2D" uid="uid://34lh7eynqhmh" path="res://assets/banned/jar.png" id="1_ala7s"]
+[ext_resource type="Texture2D" uid="uid://34lh7eynqhmh" path="res://assets/banned/jar.png" id="1_6cneg"]
 
 [sub_resource type="CapsuleShape2D" id="CapsuleShape2D_p3p07"]
 radius = 45.0
 height = 120.0
 
-[node name="CharacterBody2D" type="CharacterBody2D"]
+[node name="CharacterBody2D" type="Area2D"]
 
 [node name="Sprite2D" type="Sprite2D" parent="."]
-texture = ExtResource("1_ala7s")
+texture = ExtResource("1_6cneg")
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="."]
 shape = SubResource("CapsuleShape2D_p3p07")
