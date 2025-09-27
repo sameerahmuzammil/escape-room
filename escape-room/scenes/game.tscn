@@ -9629,3 +9629,5 @@ y_sort_origin = 16
 [node name="CollisionShape2D" type="CollisionShape2D" parent="."]
 position = Vector2(0, 8)
 shape = SubResource("WorldBoundaryShape2D_yqjtg")
+
+[node name="Camera2D" type="Camera2D" parent="."]
