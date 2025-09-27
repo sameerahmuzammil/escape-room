@@ -1,0 +1,15 @@
+# Godot 4+ specific ignores
+.godot/
+/android/
+
+# Godot-specific ignores
+.import/
+*.import
+
+#OS-specific ignores
+.DS_Store
+Thumbs.db
+
+#Editorial Settings
+.editor_settings-*
+.editor_settins-*.tres
