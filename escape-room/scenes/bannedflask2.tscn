@@ -1,23 +1,8 @@
-[gd_scene load_steps=4 format=3 uid="uid://ds8e243pdvu81"]
+[gd_scene load_steps=2 format=3 uid="uid://ds8e243pdvu81"]
 
 [ext_resource type="Texture2D" uid="uid://bpb1pdrifbyit" path="res://assets/banned/flask2.png" id="1_wfmjd"]
-
-[sub_resource type="RectangleShape2D" id="RectangleShape2D_p00rj"]
-size = Vector2(48, 100)
-
-[sub_resource type="CapsuleShape2D" id="CapsuleShape2D_ixypl"]
-radius = 64.0
-height = 128.0
 
 [node name="CharacterBody2D" type="Area2D"]
 
 [node name="Sprite2D" type="Sprite2D" parent="."]
 texture = ExtResource("1_wfmjd")
-
-[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
-position = Vector2(-7, -43)
-shape = SubResource("RectangleShape2D_p00rj")
-
-[node name="CollisionShape2D2" type="CollisionShape2D" parent="."]
-position = Vector2(-9, 27)
-shape = SubResource("CapsuleShape2D_ixypl")

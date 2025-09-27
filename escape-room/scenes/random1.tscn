@@ -1,0 +1,11 @@
+[gd_scene load_steps=2 format=3 uid="uid://b1iusdjfyhih5"]
+
+[ext_resource type="Texture2D" uid="uid://u6be3i7wh6xd" path="res://assets/objects/Flasks 32x32.png" id="1_fq7i6"]
+
+[node name="Area2D" type="Area2D"]
+
+[node name="Sprite2D" type="Sprite2D" parent="."]
+scale = Vector2(1.5, 1.5)
+texture = ExtResource("1_fq7i6")
+region_enabled = true
+region_rect = Rect2(4.923217, 223.66534, 22.752144, 31.655151)

@@ -1,11 +1,8 @@
-[gd_scene load_steps=3 format=3 uid="uid://5pd71v7sudda"]
+[gd_scene load_steps=2 format=3 uid="uid://5pd71v7sudda"]
 
 [ext_resource type="Texture2D" uid="uid://u6be3i7wh6xd" path="res://assets/objects/Flasks 32x32.png" id="1_iv6v1"]
 
-[sub_resource type="CircleShape2D" id="CircleShape2D_jjk2y"]
-radius = 21.84033
-
-[node name="Area2D" type="Area2D"]
+[node name="A" type="Area2D"]
 
 [node name="Sprite2D" type="Sprite2D" parent="."]
 position = Vector2(1.0000005, 1)
@@ -13,7 +10,3 @@ scale = Vector2(2, 2)
 texture = ExtResource("1_iv6v1")
 region_enabled = true
 region_rect = Rect2(63.954742, 192.97795, 33.137604, 30.907196)
-
-[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
-position = Vector2(-5, 5)
-shape = SubResource("CircleShape2D_jjk2y")
