@@ -1,0 +1,16 @@
+[gd_scene load_steps=3 format=3 uid="uid://8nd022qagvjf"]
+
+[ext_resource type="Texture2D" uid="uid://ba642ejrs7tdb" path="res://assets/banned/computer.png" id="1_x1f4v"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_go8r0"]
+size = Vector2(276.5, 214.5)
+
+[node name="CharacterBody2D" type="CharacterBody2D"]
+
+[node name="Sprite2D" type="Sprite2D" parent="."]
+position = Vector2(6, -4)
+texture = ExtResource("1_x1f4v")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+position = Vector2(-6.25, -28.25)
+shape = SubResource("RectangleShape2D_go8r0")
