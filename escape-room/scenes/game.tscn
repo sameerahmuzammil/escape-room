@@ -1,14 +1,16 @@
-[gd_scene load_steps=5 format=3 uid="uid://twwfawqogqiv"]
+[gd_scene load_steps=6 format=3 uid="uid://twwfawqogqiv"]
 
-[ext_resource type="Texture2D" uid="uid://c4l5xahjuqde7" path="res://assets/backgrounds/Untitled design.png" id="1_lbhrr"]
+[ext_resource type="Texture2D" uid="uid://bn7x8733p1wo" path="res://assets/backgrounds/WhatsApp Image 2025-09-27 at 15.49.22_6fc2d05f.jpg" id="1_lbhrr"]
 [ext_resource type="PackedScene" uid="uid://b8fomlqded74g" path="res://scenes/player.tscn" id="3_lbhrr"]
 [ext_resource type="Script" uid="uid://ce3hqmiy4virh" path="res://scenes/player.gd" id="4_iywne"]
 [ext_resource type="PackedScene" uid="uid://bvnikgijumb2m" path="res://scenes/zombie.tscn" id="4_lbhrr"]
+[ext_resource type="Script" path="res://scripts/zombie.gd" id="5_iywne"]
 
 [node name="Game" type="Node2D"]
 
 [node name="BgFinal" type="Sprite2D" parent="."]
-position = Vector2(102, 33)
+position = Vector2(40.00017, 10.250038)
+scale = Vector2(2.8281252, 1.6805393)
 texture = ExtResource("1_lbhrr")
 
 [node name="player" parent="." instance=ExtResource("3_lbhrr")]
@@ -16,11 +18,23 @@ collision_layer = 2
 script = ExtResource("4_iywne")
 
 [node name="Camera2D" type="Camera2D" parent="player"]
-limit_left = -1760
-limit_top = -660
-limit_right = 1790
-limit_bottom = 660
+scale = Vector2(0.6666667, 0.6666667)
+limit_left = -1762
+limit_top = -659
+limit_right = 1788
+limit_bottom = 661
 
-[node name="CharacterBody2D" parent="." instance=ExtResource("4_lbhrr")]
-position = Vector2(306.99997, 10.000003)
+[node name="zombie" parent="." instance=ExtResource("4_lbhrr")]
+z_index = 1
+position = Vector2(605, -186)
 collision_mask = 2
+script = ExtResource("5_iywne")
+
+[node name="zombie2" parent="." instance=ExtResource("4_lbhrr")]
+z_index = 1
+position = Vector2(-535.9999, 141.99997)
+collision_mask = 2
+script = ExtResource("5_iywne")
+
+[node name="RemoteTransform2D" type="RemoteTransform2D" parent="."]
+remote_path = NodePath("../player/Camera2D")
