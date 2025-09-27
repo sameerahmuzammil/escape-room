@@ -27,16 +27,16 @@ func _physics_process(delta: float) -> void:
 	
 
 	var input_vector = Vector2.ZERO
-	if Input.is_action_pressed("ui_up"):
-		input_vector.y += 1 
-		anim.play("move_up")
-	elif Input.is_action_pressed("ui_down"):
+	if Input.is_action_pressed("Move Up"):
 		input_vector.y -= 1 
+		anim.play("move_up")
+	elif Input.is_action_pressed("Move Down"):
+		input_vector.y += 1 
 		anim.play("move_down")
-	elif Input.is_action_pressed("ui_right"):
+	elif Input.is_action_pressed("Move Right"):
 		input_vector.x += 1 
 		anim.play("move_right")
-	elif Input.is_action_pressed("ui_left"):
+	elif Input.is_action_pressed("Move Left"):
 		input_vector.x -= 1 
 		anim.play("move_left")
 	else:

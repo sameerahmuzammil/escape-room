@@ -1,0 +1,94 @@
+[gd_scene load_steps=14 format=3 uid="uid://bvnikgijumb2m"]
+
+[ext_resource type="Texture2D" uid="uid://nd1t6ores4nj" path="res://assets/sprites/enemies/zombie_attack.png" id="1_xepks"]
+[ext_resource type="Texture2D" uid="uid://dx8l3dtgfvl5c" path="res://assets/sprites/enemies/zombie_run.png" id="2_4gx57"]
+[ext_resource type="PackedScene" uid="uid://bk6qhv3lvkbxa" path="res://scenes/killzone.tscn" id="3_ycv6i"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_xepks"]
+size = Vector2(10, 19)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_pjjxt"]
+atlas = ExtResource("1_xepks")
+region = Rect2(0, 0, 32, 32)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_7pfmu"]
+atlas = ExtResource("1_xepks")
+region = Rect2(32, 0, 32, 32)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_aetfh"]
+atlas = ExtResource("1_xepks")
+region = Rect2(96, 0, 32, 32)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_jjlcg"]
+atlas = ExtResource("2_4gx57")
+region = Rect2(0, 0, 32, 32)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_iblsu"]
+atlas = ExtResource("2_4gx57")
+region = Rect2(32, 0, 32, 32)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_ida1p"]
+atlas = ExtResource("2_4gx57")
+region = Rect2(64, 0, 32, 32)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_u6hpf"]
+atlas = ExtResource("2_4gx57")
+region = Rect2(96, 0, 32, 32)
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_eskk2"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_pjjxt")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_7pfmu")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_aetfh")
+}],
+"loop": true,
+"name": &"attack",
+"speed": 5.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_jjlcg")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_iblsu")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_ida1p")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_u6hpf")
+}],
+"loop": true,
+"name": &"run",
+"speed": 5.0
+}]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_4gx57"]
+size = Vector2(10, 19)
+
+[node name="zombie" type="CharacterBody2D"]
+scale = Vector2(7, 7)
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+z_index = 1
+position = Vector2(0, -0.5)
+shape = SubResource("RectangleShape2D_xepks")
+
+[node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="."]
+sprite_frames = SubResource("SpriteFrames_eskk2")
+animation = &"run"
+autoplay = "run"
+frame_progress = 0.59772456
+
+[node name="Killzone" parent="AnimatedSprite2D" instance=ExtResource("3_ycv6i")]
+
+[node name="CollisionShape2D2" type="CollisionShape2D" parent="AnimatedSprite2D/Killzone"]
+z_index = 1
+position = Vector2(0, -0.5)
+shape = SubResource("RectangleShape2D_4gx57")

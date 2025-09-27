@@ -1,4 +1,4 @@
-[gd_scene load_steps=17 format=3 uid="uid://clh0pfipftds1"]
+[gd_scene load_steps=17 format=3 uid="uid://b8fomlqded74g"]
 
 [ext_resource type="Texture2D" uid="uid://lelh1dah7osg" path="res://assets/sprites/characters/charactersheet.png" id="1_3vyb7"]
 
@@ -122,13 +122,17 @@ animations = [{
 }]
 
 [sub_resource type="CapsuleShape2D" id="CapsuleShape2D_a8ls1"]
+radius = 40.0
+height = 168.0
 
 [node name="player" type="CharacterBody2D"]
 
 [node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="."]
+scale = Vector2(4, 4)
 sprite_frames = SubResource("SpriteFrames_oprun")
 animation = &"move_up"
 autoplay = "idle"
+frame_progress = 0.19902286
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="."]
 shape = SubResource("CapsuleShape2D_a8ls1")
