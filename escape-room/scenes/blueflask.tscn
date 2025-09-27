@@ -1,8 +1,10 @@
-[gd_scene load_steps=2 format=3 uid="uid://5pd71v7sudda"]
+[gd_scene load_steps=3 format=3 uid="uid://5pd71v7sudda"]
 
 [ext_resource type="Texture2D" uid="uid://u6be3i7wh6xd" path="res://assets/objects/Flasks 32x32.png" id="1_iv6v1"]
+[ext_resource type="Script" uid="uid://ca26emjpbvrq2" path="res://scenes/flaskA.gd" id="1_jjk2y"]
 
 [node name="A" type="Area2D"]
+script = ExtResource("1_jjk2y")
 
 [node name="Sprite2D" type="Sprite2D" parent="."]
 position = Vector2(1.0000005, 1)

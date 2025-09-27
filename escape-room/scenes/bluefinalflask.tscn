@@ -1,8 +1,10 @@
-[gd_scene load_steps=2 format=3 uid="uid://bgy1o2fedpux3"]
+[gd_scene load_steps=3 format=3 uid="uid://bgy1o2fedpux3"]
 
+[ext_resource type="Script" uid="uid://d05gdkqgnv4to" path="res://scenes/flaskF.gd" id="1_5ro0w"]
 [ext_resource type="Texture2D" uid="uid://u6be3i7wh6xd" path="res://assets/objects/Flasks 32x32.png" id="1_g4g8l"]
 
-[node name="F" type="CharacterBody2D"]
+[node name="F" type="Area2D"]
+script = ExtResource("1_5ro0w")
 
 [node name="Sprite2D" type="Sprite2D" parent="."]
 texture = ExtResource("1_g4g8l")

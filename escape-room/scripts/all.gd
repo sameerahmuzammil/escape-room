@@ -13,7 +13,6 @@ func _ready():
 	# Connect buttons
 	start_button.pressed.connect(_on_start_pressed)
 	rules_button.pressed.connect(_on_rules_pressed)
-	back_button.pressed.connect(_on_back_pressed)
 	
 	# Hide rules panel initially
 	rules_panel.visible = false
@@ -30,9 +29,7 @@ func _on_rules_pressed():
 	print("Showing rules...")
 	rules_panel.visible = true
 
-func _on_back_pressed():
-	print("Back to main menu...")
-	rules_panel.visible = false
+
 
 func setup_rules_text():
 	var rules = """
@@ -160,7 +157,7 @@ var inventory = {
 var current_health: int = 3
 
 # BANNED ITEMS
-var banned_items = ["BannedItem1", "BannedItem2", "Poison"]  # Add your banned item names
+var banned_items = ["bannedflask1", "bannedflask2", "bannedjar", "bannedcomputer"]  # Add your banned item names
 
 signal inventory_changed(item: String, count: int)
 signal health_changed(new_health: int)
@@ -341,43 +338,6 @@ func game_over():
 	# Add your game over logic:
 	# get_tree().change_scene_to_file("res://GameOver.tscn")
 
-# ===================================================================
-# === FLASK SCRIPT (Flask.gd) ===
-# (Use for A, B, C, D, E, F, G flasks)
-# ===================================================================
-
-extends Area2D
-
-@export var flask_type: String = "A"  # Set in inspector
-signal flask_touched(type: String)
-
-func _ready():
-	add_to_group("flasks")
-	body_entered.connect(_on_body_entered)
-
-func _on_body_entered(body):
-	if body.is_in_group("player"):
-		flask_touched.emit(flask_type)
-
-# ===================================================================
-# === BANNED ITEM SCRIPT (BannedItem.gd) ===
-# ===================================================================
-
-extends Area2D
-
-@export var flask_type: String = "BannedItem1"  # Set in inspector
-signal flask_touched(type: String)
-
-func _ready():
-	add_to_group("banned_items")
-	body_entered.connect(_on_body_entered)
-	
-	# Visual indicator
-	modulate = Color(1, 0.5, 0.5)  # Red tint
-
-func _on_body_entered(body):
-	if body.is_in_group("player"):
-		flask_touched.emit(flask_type)
 
 # ===================================================================
 # === INVENTORY UI SCRIPT (InventoryUI.gd) ===

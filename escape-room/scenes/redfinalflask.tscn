@@ -1,8 +1,10 @@
-[gd_scene load_steps=2 format=3 uid="uid://4g5qxvwowba4"]
+[gd_scene load_steps=3 format=3 uid="uid://4g5qxvwowba4"]
 
 [ext_resource type="Texture2D" uid="uid://u6be3i7wh6xd" path="res://assets/objects/Flasks 32x32.png" id="1_ml57w"]
+[ext_resource type="Script" uid="uid://c6icf3ox0k88m" path="res://scenes/flaskG.gd" id="1_st7th"]
 
-[node name="G" type="CharacterBody2D"]
+[node name="G" type="Area2D"]
+script = ExtResource("1_st7th")
 
 [node name="Sprite2D" type="Sprite2D" parent="."]
 scale = Vector2(2, 2)
