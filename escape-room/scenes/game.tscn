@@ -1,9 +1,16 @@
-[gd_scene load_steps=9 format=3 uid="uid://twwfawqogqiv"]
+[gd_scene load_steps=16 format=3 uid="uid://twwfawqogqiv"]
 
 [ext_resource type="Texture2D" uid="uid://bn7x8733p1wo" path="res://assets/backgrounds/WhatsApp Image 2025-09-27 at 15.49.22_6fc2d05f.jpg" id="1_lbhrr"]
 [ext_resource type="PackedScene" uid="uid://b8fomlqded74g" path="res://scenes/player.tscn" id="3_lbhrr"]
 [ext_resource type="Script" uid="uid://ce3hqmiy4virh" path="res://scripts/player.gd" id="4_iywne"]
 [ext_resource type="PackedScene" uid="uid://bm2k1fqrfnhmr" path="res://scenes/zombie.tscn" id="4_lbhrr"]
+[ext_resource type="PackedScene" uid="uid://5pd71v7sudda" path="res://scenes/blueflask.tscn" id="5_u5sy4"]
+[ext_resource type="PackedScene" uid="uid://wndcleaxtw7i" path="res://scenes/reddropper.tscn" id="6_gee14"]
+[ext_resource type="PackedScene" uid="uid://dxbah8amvowwc" path="res://scenes/greenfinaltube.tscn" id="7_0tnpc"]
+[ext_resource type="PackedScene" uid="uid://ccl2m4axotjy6" path="res://scenes/clearflask.tscn" id="8_kvpfn"]
+[ext_resource type="PackedScene" uid="uid://bkm337yb6djg5" path="res://scenes/bluedropper.tscn" id="9_dinhu"]
+[ext_resource type="PackedScene" uid="uid://bgy1o2fedpux3" path="res://scenes/bluefinalflask.tscn" id="10_kvuet"]
+[ext_resource type="PackedScene" uid="uid://4g5qxvwowba4" path="res://scenes/redfinalflask.tscn" id="11_trtic"]
 
 [sub_resource type="WorldBoundaryShape2D" id="WorldBoundaryShape2D_iywne"]
 normal = Vector2(-0.9999987, 0.0016339849)
@@ -71,3 +78,31 @@ shape = SubResource("WorldBoundaryShape2D_u5sy4")
 [node name="up" type="CollisionShape2D" parent="StaticBody2D"]
 position = Vector2(-18, -1049)
 shape = SubResource("WorldBoundaryShape2D_gee14")
+
+[node name="Collectibles" type="Node" parent="."]
+
+[node name="CharacterBody2D3" parent="Collectibles" instance=ExtResource("9_dinhu")]
+position = Vector2(-1122, 547)
+rotation = 0.64751714
+
+[node name="Area2D" parent="Collectibles" instance=ExtResource("5_u5sy4")]
+position = Vector2(66, -511)
+
+[node name="Area2D2" parent="Collectibles" instance=ExtResource("6_gee14")]
+position = Vector2(-1454, -381)
+rotation = 0.22863813
+scale = Vector2(0.49999997, 0.49999997)
+
+[node name="CharacterBody2D" parent="Collectibles" instance=ExtResource("7_0tnpc")]
+position = Vector2(809.00006, -261.00006)
+rotation = 0.7330383
+scale = Vector2(0.3, 0.3)
+
+[node name="CharacterBody2D2" parent="Collectibles" instance=ExtResource("8_kvpfn")]
+position = Vector2(153, -512)
+
+[node name="CharacterBody2D4" parent="Collectibles" instance=ExtResource("10_kvuet")]
+position = Vector2(129, -497)
+
+[node name="CharacterBody2D5" parent="Collectibles" instance=ExtResource("11_trtic")]
+position = Vector2(178, -427)
