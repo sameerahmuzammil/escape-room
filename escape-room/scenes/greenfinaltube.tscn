@@ -1,0 +1,20 @@
+[gd_scene load_steps=3 format=3 uid="uid://dxbah8amvowwc"]
+
+[ext_resource type="Texture2D" uid="uid://u6be3i7wh6xd" path="res://assets/objects/Flasks 32x32.png" id="1_bq0jm"]
+
+[sub_resource type="CapsuleShape2D" id="CapsuleShape2D_bq0jm"]
+radius = 10.63009
+height = 54.003807
+
+[node name="CharacterBody2D" type="CharacterBody2D"]
+
+[node name="Sprite2D" type="Sprite2D" parent="."]
+scale = Vector2(2, 2)
+texture = ExtResource("1_bq0jm")
+region_enabled = true
+region_rect = Rect2(222.43721, 158.33444, 30.809769, 34.496384)
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+position = Vector2(4, 2)
+rotation = -0.7330383
+shape = SubResource("CapsuleShape2D_bq0jm")
