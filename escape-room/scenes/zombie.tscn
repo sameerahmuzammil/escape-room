@@ -73,6 +73,7 @@ animations = [{
 size = Vector2(10, 19)
 
 [node name="zombie" type="CharacterBody2D"]
+position = Vector2(0.99999994, -1.9999998)
 scale = Vector2(7, 7)
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="."]
@@ -84,7 +85,7 @@ shape = SubResource("RectangleShape2D_xepks")
 sprite_frames = SubResource("SpriteFrames_eskk2")
 animation = &"run"
 autoplay = "run"
-frame_progress = 0.59772456
+frame_progress = 0.5205449
 
 [node name="Killzone" parent="AnimatedSprite2D" instance=ExtResource("3_ycv6i")]
 
