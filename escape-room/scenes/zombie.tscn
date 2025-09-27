@@ -1,9 +1,9 @@
-[gd_scene load_steps=16 format=3 uid="uid://bvnikgijumb2m"]
+[gd_scene load_steps=16 format=3 uid="uid://bm2k1fqrfnhmr"]
 
 [ext_resource type="Script" uid="uid://ogpyg65v3b32" path="res://scripts/zombie.gd" id="1_4gx57"]
 [ext_resource type="Texture2D" uid="uid://b734jehbu4dq6" path="res://assets/sprites/enemies/zombie_attack.png" id="1_xepks"]
 [ext_resource type="Texture2D" uid="uid://bfbe7skh3wavn" path="res://assets/sprites/enemies/zombie_run.png" id="2_4gx57"]
-[ext_resource type="PackedScene" uid="uid://bk6qhv3lvkbxa" path="res://scenes/killzone.tscn" id="3_ycv6i"]
+[ext_resource type="PackedScene" path="res://scenes/killzone.tscn" id="3_ycv6i"]
 
 [sub_resource type="CircleShape2D" id="CircleShape2D_pjjxt"]
 radius = 4.57366
@@ -78,6 +78,7 @@ size = Vector2(9, 16.285717)
 
 [node name="zombie" type="CharacterBody2D"]
 scale = Vector2(7, 7)
+collision_mask = 3
 script = ExtResource("1_4gx57")
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="."]

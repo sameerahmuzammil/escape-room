@@ -1,6 +1,6 @@
 [gd_scene load_steps=17 format=3 uid="uid://b8fomlqded74g"]
 
-[ext_resource type="Texture2D" uid="uid://lelh1dah7osg" path="res://assets/sprites/characters/charactersheet.png" id="1_3vyb7"]
+[ext_resource type="Texture2D" uid="uid://cbdt8wafr3yse" path="res://assets/sprites/characters/charactersheet.png" id="1_3vyb7"]
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_g2els"]
 atlas = ExtResource("1_3vyb7")
@@ -126,7 +126,6 @@ radius = 40.0
 height = 168.0
 
 [node name="player" type="CharacterBody2D"]
-scale = Vector2(1.5, 1.5)
 
 [node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="."]
 scale = Vector2(4, 4)
