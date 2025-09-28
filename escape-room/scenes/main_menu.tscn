@@ -1,0 +1,135 @@
+[gd_scene load_steps=10 format=3 uid="uid://dd8fho43cjxr5"]
+
+[ext_resource type="Script" uid="uid://chyedqweegb6c" path="res://main_menu.gd" id="1_8luw0"]
+[ext_resource type="Texture2D" uid="uid://bspw6dfpcje7s" path="res://assets/yay.jpg" id="1_ev8hm"]
+[ext_resource type="FontFile" uid="uid://bnm4wul3gumgb" path="res://assets/fonts/PixelOperator8.ttf" id="2_8luw0"]
+[ext_resource type="FontFile" uid="uid://7nj5ithl3q0e" path="res://assets/fonts/PixelOperator8-Bold.ttf" id="3_lcdwi"]
+
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_iohc1"]
+texture = ExtResource("1_ev8hm")
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_ep83s"]
+bg_color = Color(1, 1, 1, 1)
+corner_radius_top_left = 16
+corner_radius_top_right = 16
+corner_radius_bottom_right = 16
+corner_radius_bottom_left = 16
+shadow_size = 5
+shadow_offset = Vector2(0, 3.41)
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_ev8hm"]
+bg_color = Color(1, 1, 1, 1)
+corner_radius_top_left = 16
+corner_radius_top_right = 16
+corner_radius_bottom_right = 16
+corner_radius_bottom_left = 16
+shadow_size = 5
+shadow_offset = Vector2(0, 3.41)
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_8luw0"]
+bg_color = Color(0.6556008, 0.6556009, 0.6556008, 1)
+corner_radius_top_left = 16
+corner_radius_top_right = 16
+corner_radius_bottom_right = 16
+corner_radius_bottom_left = 16
+shadow_size = 5
+shadow_offset = Vector2(0, 3.41)
+
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_ev8hm"]
+
+[node name="MainManu" type="Control"]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+script = ExtResource("1_8luw0")
+
+[node name="Panel" type="Panel" parent="."]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_left = 2.0
+offset_top = 1.9999999
+offset_right = 2.0
+offset_bottom = -478.9897
+grow_horizontal = 2
+grow_vertical = 2
+scale = Vector2(1, 3.8799996)
+theme_override_styles/panel = SubResource("StyleBoxTexture_iohc1")
+
+[node name="VBoxContainer" type="VBoxContainer" parent="."]
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -170.0
+offset_top = 1.0
+offset_right = 65.0
+offset_bottom = 91.0
+grow_horizontal = 2
+grow_vertical = 2
+scale = Vector2(1.352416, 1.3424375)
+size_flags_horizontal = 4
+theme_override_constants/separation = 12
+alignment = 1
+
+[node name="Button" type="Button" parent="VBoxContainer"]
+layout_mode = 2
+size_flags_vertical = 3
+theme_override_colors/font_color = Color(0, 0, 0, 1)
+theme_override_colors/font_focus_color = Color(0, 0, 0, 1)
+theme_override_colors/font_pressed_color = Color(0, 0, 0, 1)
+theme_override_colors/font_hover_color = Color(0, 0, 0, 1)
+theme_override_fonts/font = ExtResource("2_8luw0")
+theme_override_font_sizes/font_size = 28
+theme_override_styles/normal = SubResource("StyleBoxFlat_ep83s")
+theme_override_styles/hover = SubResource("StyleBoxFlat_ev8hm")
+theme_override_styles/hover_pressed = SubResource("StyleBoxFlat_8luw0")
+theme_override_styles/focus = SubResource("StyleBoxEmpty_ev8hm")
+text = "Start Game
+"
+
+[node name="Button2" type="Button" parent="VBoxContainer"]
+layout_mode = 2
+size_flags_vertical = 3
+theme_override_colors/font_color = Color(0, 0, 0, 1)
+theme_override_colors/font_focus_color = Color(0, 0, 0, 1)
+theme_override_colors/font_pressed_color = Color(0, 0, 0, 1)
+theme_override_colors/font_hover_color = Color(0, 0, 0, 1)
+theme_override_fonts/font = ExtResource("2_8luw0")
+theme_override_font_sizes/font_size = 28
+theme_override_styles/normal = SubResource("StyleBoxFlat_ep83s")
+theme_override_styles/hover = SubResource("StyleBoxFlat_ev8hm")
+theme_override_styles/hover_pressed = SubResource("StyleBoxFlat_8luw0")
+theme_override_styles/focus = SubResource("StyleBoxEmpty_ev8hm")
+text = "Rules
+"
+
+[node name="Label" type="Label" parent="."]
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -267.0
+offset_top = -141.0
+offset_right = 267.0
+offset_bottom = -65.0
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_colors/font_shadow_color = Color(0, 0, 0, 1)
+theme_override_constants/shadow_offset_x = 10
+theme_override_fonts/font = ExtResource("3_lcdwi")
+theme_override_font_sizes/font_size = 45
+text = "Escape Room"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[connection signal="pressed" from="VBoxContainer/Button" to="." method="_on_start_pressed"]
+[connection signal="pressed" from="VBoxContainer/Button2" to="." method="_on_rules_pressed"]
