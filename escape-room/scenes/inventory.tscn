@@ -1,0 +1,32 @@
+[gd_scene load_steps=2 format=3 uid="uid://dteagwbhph26t"]
+
+[ext_resource type="Texture2D" uid="uid://u6be3i7wh6xd" path="res://assets/objects/Flasks 32x32.png" id="1_qw0r6"]
+
+[node name="Node2D" type="Node2D"]
+
+[node name="Area2D" type="Area2D" parent="."]
+
+[node name="Sprite2D2" type="Sprite2D" parent="Area2D"]
+position = Vector2(-53, 1)
+scale = Vector2(2, 2)
+texture = ExtResource("1_qw0r6")
+region_enabled = true
+region_rect = Rect2(222.43721, 158.33444, 30.809769, 34.496384)
+
+[node name="Area2D2" type="Area2D" parent="."]
+
+[node name="Sprite2D" type="Sprite2D" parent="Area2D2"]
+position = Vector2(-1, 0)
+scale = Vector2(1.5, 1.5)
+texture = ExtResource("1_qw0r6")
+region_enabled = true
+region_rect = Rect2(1.1962891, 159.76822, 27.720886, 33.456253)
+
+[node name="Area2D3" type="Area2D" parent="."]
+
+[node name="Sprite2D" type="Sprite2D" parent="."]
+position = Vector2(53, -2)
+scale = Vector2(2, 2)
+texture = ExtResource("1_qw0r6")
+region_enabled = true
+region_rect = Rect2(132.73969, 126.537766, 26.359467, 35.62874)
