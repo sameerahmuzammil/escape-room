@@ -1,8 +1,9 @@
-[gd_scene load_steps=23 format=3 uid="uid://twwfawqogqiv"]
+[gd_scene load_steps=40 format=3 uid="uid://twwfawqogqiv"]
 
-[ext_resource type="Script" uid="uid://b3gwtp1nuovl6" path="res://scripts/scripts/game.gd" id="1_264po"]
+[ext_resource type="Script" uid="uid://b3gwtp1nuovl6" path="res://scripts/game.gd" id="1_264po"]
+[ext_resource type="Texture2D" uid="uid://bn7x8733p1wo" path="res://assets/backgrounds/WhatsApp Image 2025-09-27 at 15.49.22_6fc2d05f.jpg" id="1_lbhrr"]
 [ext_resource type="PackedScene" uid="uid://b8fomlqded74g" path="res://scenes/player.tscn" id="3_lbhrr"]
-[ext_resource type="Script" uid="uid://ce3hqmiy4virh" path="res://scripts/scripts/player.gd" id="4_iywne"]
+[ext_resource type="Script" uid="uid://ce3hqmiy4virh" path="res://scripts/player.gd" id="4_iywne"]
 [ext_resource type="PackedScene" uid="uid://bm2k1fqrfnhmr" path="res://scenes/zombie.tscn" id="4_lbhrr"]
 [ext_resource type="PackedScene" uid="uid://5pd71v7sudda" path="res://scenes/blueflask.tscn" id="5_u5sy4"]
 [ext_resource type="PackedScene" uid="uid://wndcleaxtw7i" path="res://scenes/reddropper.tscn" id="6_gee14"]
@@ -34,15 +35,67 @@ distance = 4.0
 normal = Vector2(0, 1)
 distance = 340.0
 
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_264po"]
+size = Vector2(623.5, 87)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_1kice"]
+size = Vector2(667, 95)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_5newe"]
+size = Vector2(348.5, 98)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_37s47"]
+size = Vector2(1536, 172)
+
+[sub_resource type="CapsuleShape2D" id="CapsuleShape2D_bt5mj"]
+radius = 126.0
+height = 252.0
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_bt5mj"]
+size = Vector2(178, 217)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_e1j6l"]
+size = Vector2(105.5, 182.5)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_pl11u"]
+size = Vector2(628, 58)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_bhx41"]
+size = Vector2(190, 51.75)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_qnb83"]
+size = Vector2(232.5, 4)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_suyxu"]
+size = Vector2(83, 10)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_sgl2t"]
+size = Vector2(494.5, 31)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_sww3w"]
+size = Vector2(39, 57)
+
+[sub_resource type="CapsuleShape2D" id="CapsuleShape2D_264po"]
+radius = 101.0
+height = 340.0
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_qouja"]
+size = Vector2(455.5, 34)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_wljb1"]
+size = Vector2(218, 94)
+
 [node name="Game" type="Node2D"]
 script = ExtResource("1_264po")
 
 [node name="BgFinal" type="Sprite2D" parent="."]
 position = Vector2(40.00017, 10.250038)
 scale = Vector2(2.8281252, 1.6805393)
+texture = ExtResource("1_lbhrr")
 
 [node name="player" parent="." instance=ExtResource("3_lbhrr")]
 z_index = 5
+position = Vector2(-81, 333)
 scale = Vector2(1.5, 1.5)
 collision_layer = 2
 script = ExtResource("4_iywne")
@@ -63,9 +116,14 @@ z_index = 1
 position = Vector2(606.00006, -186.00002)
 collision_mask = 2
 
+[node name="zombie3" parent="." instance=ExtResource("4_lbhrr")]
+z_index = 1
+position = Vector2(1133, 286.99994)
+collision_mask = 2
+
 [node name="zombie2" parent="." instance=ExtResource("4_lbhrr")]
 z_index = 1
-position = Vector2(-535.9999, 141.99997)
+position = Vector2(-631, 153.00002)
 collision_mask = 2
 
 [node name="StaticBody2D" type="StaticBody2D" parent="."]
@@ -105,35 +163,28 @@ position = Vector2(148, -421)
 [node name="E" parent="Collectibles" instance=ExtResource("9_dinhu")]
 position = Vector2(-1122, 547)
 rotation = 0.64751714
-script = null
 
 [node name="A" parent="Collectibles" instance=ExtResource("5_u5sy4")]
 position = Vector2(-451, -204)
-script = null
 
 [node name="B" parent="Collectibles" instance=ExtResource("6_gee14")]
 position = Vector2(-1454, -381)
 rotation = 0.22863813
 scale = Vector2(0.49999997, 0.49999997)
-script = null
 
 [node name="C" parent="Collectibles" instance=ExtResource("7_0tnpc")]
 position = Vector2(-160.99998, -178.99998)
 rotation = 0.86219263
 scale = Vector2(0.7, 0.7)
-script = null
 
 [node name="D" parent="Collectibles" instance=ExtResource("8_kvpfn")]
 position = Vector2(153, -512)
-script = null
 
 [node name="F" parent="Collectibles" instance=ExtResource("10_kvuet")]
 position = Vector2(-185, -458)
-script = null
 
 [node name="G" parent="Collectibles" instance=ExtResource("11_trtic")]
 position = Vector2(1718, -149)
-script = null
 
 [node name="BANNED" type="Node" parent="."]
 
@@ -160,3 +211,71 @@ scale = Vector2(0.4, 0.4)
 [node name="BAN6" parent="BANNED" instance=ExtResource("17_rysoc")]
 position = Vector2(-371, -401.00003)
 scale = Vector2(0.3, 0.3)
+
+[node name="collisions" type="CharacterBody2D" parent="."]
+collision_mask = 3
+
+[node name="CollisionShape2D2" type="CollisionShape2D" parent="collisions"]
+position = Vector2(-394.75, -592.5)
+scale = Vector2(0.99999994, 0.99999994)
+shape = SubResource("RectangleShape2D_264po")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="collisions"]
+position = Vector2(-1042.5, -589.5)
+shape = SubResource("RectangleShape2D_1kice")
+
+[node name="CollisionShape2D3" type="CollisionShape2D" parent="collisions"]
+position = Vector2(96.75, -604)
+shape = SubResource("RectangleShape2D_5newe")
+
+[node name="CollisionShape2D4" type="CollisionShape2D" parent="collisions"]
+position = Vector2(1042, -566)
+shape = SubResource("RectangleShape2D_37s47")
+
+[node name="CollisionShape2D5" type="CollisionShape2D" parent="collisions"]
+position = Vector2(-1629, -553)
+shape = SubResource("CapsuleShape2D_bt5mj")
+
+[node name="CollisionShape2D6" type="CollisionShape2D" parent="collisions"]
+position = Vector2(1581, -101.5)
+shape = SubResource("RectangleShape2D_bt5mj")
+
+[node name="CollisionShape2D7" type="CollisionShape2D" parent="collisions"]
+position = Vector2(-1714.75, -105.25)
+shape = SubResource("RectangleShape2D_e1j6l")
+
+[node name="CollisionShape2D8" type="CollisionShape2D" parent="collisions"]
+position = Vector2(-1389, 378)
+shape = SubResource("RectangleShape2D_pl11u")
+
+[node name="CollisionShape2D9" type="CollisionShape2D" parent="collisions"]
+position = Vector2(-1115, -185.875)
+shape = SubResource("RectangleShape2D_bhx41")
+
+[node name="CollisionShape2D10" type="CollisionShape2D" parent="collisions"]
+position = Vector2(-892.25, -163)
+shape = SubResource("RectangleShape2D_qnb83")
+
+[node name="CollisionShape2D12" type="CollisionShape2D" parent="collisions"]
+position = Vector2(-46, -204)
+shape = SubResource("RectangleShape2D_suyxu")
+
+[node name="CollisionShape2D13" type="CollisionShape2D" parent="collisions"]
+position = Vector2(-242.25, -226.5)
+shape = SubResource("RectangleShape2D_sgl2t")
+
+[node name="CollisionShape2D11" type="CollisionShape2D" parent="collisions"]
+position = Vector2(-804.5, -199.5)
+shape = SubResource("RectangleShape2D_sww3w")
+
+[node name="CollisionShape2D14" type="CollisionShape2D" parent="collisions"]
+position = Vector2(696, -485)
+shape = SubResource("CapsuleShape2D_264po")
+
+[node name="CollisionShape2D15" type="CollisionShape2D" parent="collisions"]
+position = Vector2(-999.75, -247)
+shape = SubResource("RectangleShape2D_qouja")
+
+[node name="CollisionShape2D16" type="CollisionShape2D" parent="collisions"]
+position = Vector2(-416, 85)
+shape = SubResource("RectangleShape2D_wljb1")
