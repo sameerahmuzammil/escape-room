@@ -1,8 +1,10 @@
-[gd_scene load_steps=2 format=3 uid="uid://jc0ltu2e47sr"]
+[gd_scene load_steps=3 format=3 uid="uid://beq0ufpptbq1b"]
 
-[ext_resource type="Texture2D" uid="uid://bvmy51xrgpuls" path="res://assets/elements/Health.png" id="1_5e2k1"]
+[ext_resource type="Script" uid="uid://dxqqssk77wp3l" path="res://scripts/scripts/healthbar.gd" id="1_2rad1"]
+[ext_resource type="Texture2D" uid="uid://be555tcp6044b" path="res://assets/elements/Health.png" id="1_5e2k1"]
 
 [node name="Area2D" type="Area2D"]
+script = ExtResource("1_2rad1")
 
 [node name="Sprite2D" type="Sprite2D" parent="."]
 texture = ExtResource("1_5e2k1")

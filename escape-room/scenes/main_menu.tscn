@@ -1,12 +1,10 @@
-[gd_scene load_steps=10 format=3 uid="uid://dd8fho43cjxr5"]
+[gd_scene load_steps=9 format=3 uid="uid://b0ggaf3nfw3nt"]
 
-[ext_resource type="Script" uid="uid://chyedqweegb6c" path="res://main_menu.gd" id="1_8luw0"]
-[ext_resource type="Texture2D" uid="uid://bspw6dfpcje7s" path="res://assets/yay.jpg" id="1_ev8hm"]
-[ext_resource type="FontFile" uid="uid://bnm4wul3gumgb" path="res://assets/fonts/PixelOperator8.ttf" id="2_8luw0"]
-[ext_resource type="FontFile" uid="uid://7nj5ithl3q0e" path="res://assets/fonts/PixelOperator8-Bold.ttf" id="3_lcdwi"]
+[ext_resource type="Script" uid="uid://c3c8vewoe6def" path="res://scripts/scripts/start scene.gd" id="1_bqqt6"]
+[ext_resource type="FontFile" uid="uid://budly2rsxvpab" path="res://assets/fonts/PixelOperator8.ttf" id="2_8luw0"]
+[ext_resource type="FontFile" uid="uid://d4khpulaoi2gp" path="res://assets/fonts/PixelOperator8-Bold.ttf" id="3_lcdwi"]
 
 [sub_resource type="StyleBoxTexture" id="StyleBoxTexture_iohc1"]
-texture = ExtResource("1_ev8hm")
 
 [sub_resource type="StyleBoxFlat" id="StyleBoxFlat_ep83s"]
 bg_color = Color(1, 1, 1, 1)
@@ -44,7 +42,7 @@ anchor_right = 1.0
 anchor_bottom = 1.0
 grow_horizontal = 2
 grow_vertical = 2
-script = ExtResource("1_8luw0")
+script = ExtResource("1_bqqt6")
 
 [node name="Panel" type="Panel" parent="."]
 layout_mode = 1

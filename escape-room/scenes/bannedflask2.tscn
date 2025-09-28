@@ -1,8 +1,9 @@
 [gd_scene load_steps=2 format=3 uid="uid://ds8e243pdvu81"]
 
-[ext_resource type="Texture2D" uid="uid://bpb1pdrifbyit" path="res://assets/banned/flask2.png" id="1_wfmjd"]
+[ext_resource type="Script" uid="uid://dk5uuulgre6ml" path="res://scripts/scripts/bannedscript.gd" id="1_wfmjd"]
 
 [node name="CharacterBody2D" type="Area2D"]
+script = ExtResource("1_wfmjd")
+flask_type = "bannedflask2"
 
 [node name="Sprite2D" type="Sprite2D" parent="."]
-texture = ExtResource("1_wfmjd")

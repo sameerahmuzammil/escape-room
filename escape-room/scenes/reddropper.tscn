@@ -1,14 +1,13 @@
-[gd_scene load_steps=3 format=3 uid="uid://wndcleaxtw7i"]
+[gd_scene load_steps=2 format=3 uid="uid://wndcleaxtw7i"]
 
-[ext_resource type="Texture2D" uid="uid://u6be3i7wh6xd" path="res://assets/objects/Flasks 32x32.png" id="1_aqml6"]
-[ext_resource type="Script" uid="uid://blxy87o3v232j" path="res://scenes/flaskB.gd" id="1_r16gs"]
+[ext_resource type="Script" uid="uid://bo417qibfkj25" path="res://scripts/flask.gd" id="1_aqml6"]
 
 [node name="B" type="Area2D"]
-script = ExtResource("1_r16gs")
+script = ExtResource("1_aqml6")
+flask_type = "B"
 
 [node name="Sprite2D" type="Sprite2D" parent="."]
 position = Vector2(0, -1)
 scale = Vector2(2, 2)
-texture = ExtResource("1_aqml6")
 region_enabled = true
 region_rect = Rect2(195.8679, 128.93317, 28.039505, 33.137604)
