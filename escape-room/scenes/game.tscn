@@ -1,6 +1,6 @@
-[gd_scene load_steps=24 format=3 uid="uid://twwfawqogqiv"]
+[gd_scene load_steps=26 format=3 uid="uid://twwfawqogqiv"]
 
-[ext_resource type="Script" uid="uid://b3gwtp1nuovl6" path="res://scenes/game.gd" id="1_264po"]
+[ext_resource type="Script" uid="uid://b3gwtp1nuovl6" path="res://scripts/game.gd" id="1_264po"]
 [ext_resource type="Texture2D" uid="uid://bn7x8733p1wo" path="res://assets/backgrounds/WhatsApp Image 2025-09-27 at 15.49.22_6fc2d05f.jpg" id="1_lbhrr"]
 [ext_resource type="PackedScene" uid="uid://b8fomlqded74g" path="res://scenes/player.tscn" id="3_lbhrr"]
 [ext_resource type="Script" uid="uid://ce3hqmiy4virh" path="res://scripts/player.gd" id="4_iywne"]
@@ -35,6 +35,12 @@ distance = 4.0
 normal = Vector2(0, 1)
 distance = 340.0
 
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_264po"]
+size = Vector2(293.5, 121)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_1kice"]
+size = Vector2(667, 196)
+
 [node name="Game" type="Node2D"]
 script = ExtResource("1_264po")
 
@@ -45,6 +51,7 @@ texture = ExtResource("1_lbhrr")
 
 [node name="player" parent="." instance=ExtResource("3_lbhrr")]
 z_index = 5
+position = Vector2(-81, 333)
 scale = Vector2(1.5, 1.5)
 collision_layer = 2
 script = ExtResource("4_iywne")
@@ -65,9 +72,14 @@ z_index = 1
 position = Vector2(606.00006, -186.00002)
 collision_mask = 2
 
+[node name="zombie3" parent="." instance=ExtResource("4_lbhrr")]
+z_index = 1
+position = Vector2(1133, 286.99994)
+collision_mask = 2
+
 [node name="zombie2" parent="." instance=ExtResource("4_lbhrr")]
 z_index = 1
-position = Vector2(-535.9999, 141.99997)
+position = Vector2(-631, 153.00002)
 collision_mask = 2
 
 [node name="StaticBody2D" type="StaticBody2D" parent="."]
@@ -155,3 +167,15 @@ scale = Vector2(0.4, 0.4)
 [node name="BAN6" parent="BANNED" instance=ExtResource("17_rysoc")]
 position = Vector2(-371, -401.00003)
 scale = Vector2(0.3, 0.3)
+
+[node name="Area2D" type="CharacterBody2D" parent="."]
+collision_mask = 3
+
+[node name="CollisionShape2D2" type="CollisionShape2D" parent="Area2D"]
+position = Vector2(-559.75, -575.5)
+scale = Vector2(0.99999994, 0.99999994)
+shape = SubResource("RectangleShape2D_264po")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Area2D"]
+position = Vector2(-1042.5, -539)
+shape = SubResource("RectangleShape2D_1kice")
